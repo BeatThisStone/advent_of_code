@@ -1,1 +1,0 @@
-C:\Users\nicol\Documents\GitHub\adventOfCode2023\rust\day02\target\debug\part2.exe: C:\Users\nicol\Documents\GitHub\adventOfCode2023\rust\day02\src\bin\input.txt C:\Users\nicol\Documents\GitHub\adventOfCode2023\rust\day02\src\bin\part2.rs

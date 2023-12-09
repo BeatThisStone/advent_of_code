@@ -1,1 +1,0 @@
-C:\Users\nicol\Documents\GitHub\adventOfCode2023\rust\day08\target\debug\day08.exe: C:\Users\nicol\Documents\GitHub\adventOfCode2023\rust\day08\src\input.txt C:\Users\nicol\Documents\GitHub\adventOfCode2023\rust\day08\src\main.rs
