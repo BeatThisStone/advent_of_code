@@ -1,6 +1,5 @@
 use std::ops::Range;
 
-#[derive(Debug)]
 struct Map {
     modifier: i64,
     destination: Range<i64>,
@@ -20,7 +19,6 @@ impl Map {
     }
 }
 
-#[derive(Debug)]
 struct Parser {
     seeds: Vec<i64>,
     maps: Vec<Vec<Map>>,
@@ -65,12 +63,11 @@ fn main() {
     lines.next();
     lines.next();
     let mut index = 0;
-    for line in lines {
+    for (index, line) in lines.enumerate() {
         if line.is_empty() {
             continue;
         }
         if line.contains("map") {
-            index += 1;
             continue;
         }
         let result: Vec<i64> = line.split(' ').filter_map(|x| x.parse().ok()).collect();

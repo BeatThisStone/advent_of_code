@@ -1,8 +1,10 @@
 fn main() {
-    let my_str = include_str!("input.txt");
-    let mut found_number: Vec<u32> = Vec::new();
+    let mut found_number: Vec<i32> = Vec::new();
     let mut sum = 0;
-    for line in my_str.lines() {
+    for line in include_str!("input.txt").lines() {
+        if line.is_empty() {
+            break;
+        }
         found_number.clear();
         let line = line
             .replace("one", "o1e")
@@ -17,16 +19,10 @@ fn main() {
             .replace("zero", "z0o");
         for char in line.chars() {
             if let Some(num) = char.to_digit(10) {
-                found_number.push(num);
+                found_number.push(num as i32);
             }
         }
-        let num: i32 = format!(
-            "{}{}",
-            found_number.first().unwrap(),
-            found_number.last().unwrap()
-        )
-        .parse()
-        .unwrap();
+        let num = found_number.first().unwrap() * 10 + found_number.last().unwrap();
         sum += num;
     }
     println!("{}", sum);

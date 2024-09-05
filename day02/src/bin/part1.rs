@@ -47,12 +47,12 @@ fn main() {
     let mut index: i32 = -1;
     'outer: for line in my_str.lines() {
         index += 1;
-        let line: Vec<&str> = line.split(":").collect();
-        let games: Vec<&str> = line[1].split(";").collect();
+        let line: Vec<&str> = line.split(':').collect();
+        let games: Vec<&str> = line[1].split(';').collect();
         total.push(Game::new(index + 1));
         for game in games {
             total[index as usize].reset();
-            let parts: Vec<&str> = game.split(" ").collect();
+            let parts: Vec<&str> = game.split(' ').collect();
             for j in 0..parts.len() {
                 if let Ok(num) = parts[j].parse() {
                     if parts[j + 1].contains("green") {

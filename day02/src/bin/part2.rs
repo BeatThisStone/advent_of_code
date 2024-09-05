@@ -50,11 +50,11 @@ fn main() {
     for line in my_str.lines() {
         index += 1;
         let i = index as usize;
-        let line: Vec<&str> = line.split(":").collect();
-        let games: Vec<&str> = line[1].split(";").collect();
+        let line: Vec<&str> = line.split(':').collect();
+        let games: Vec<&str> = line[1].split(';').collect();
         total.push(Game::new());
         for game in games {
-            let parts: Vec<&str> = game.split(" ").collect();
+            let parts: Vec<&str> = game.split(' ').collect();
             for j in 0..parts.len() {
                 if let Ok(num) = parts[j].parse() {
                     if parts[j + 1].contains("green") {
